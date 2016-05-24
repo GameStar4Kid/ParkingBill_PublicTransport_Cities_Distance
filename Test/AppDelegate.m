@@ -46,7 +46,7 @@
         {
             i=nextDay;
         }
-        nextDay=-1;
+        nextDay=i+7;
         int paid=0;
         int firstDayInArr=[A[i] intValue];
         for(int j=i;j<i+7;j++)//check next 7 days
@@ -80,6 +80,7 @@
     if(total>25)
     {
         //we should buy 30 days ticket
+        NSLog(@"max roi total=%d",total);
         total=25;
     }
     return total;
@@ -227,13 +228,11 @@
 //    NSLog(@"solution=%d",solution);
 
 //    NSArray*a =@[@"1",@"2",@"4",@"5",@"7",@"29",@"30"];
-//    NSArray*a =@[@"1",@"2",@"3",@"4",@"6",@"7",@"9",@"10",@"11",@"12",@"13",@"14",@"17",@"19",@"28",@"29"];
-//    int solution=[self solution2:a];
-//    NSLog(@"solution2=%d",solution);
+    NSArray*a =@[@"1",@"2",@"3",@"4",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"17",@"19",@"20",@"21",@"29"];
+    int solution=[self solution2:a];
+    NSLog(@"solution2=%d",solution);
     
     //1,3,2,3
-    NSArray*arr=@[@"9",@"1",@"4",@"9",@"0",@"4",@"8",@"9",@"0",@"1"];
-    NSArray*a = [self solution4:arr];
 //    NSMutableString*str=[[NSMutableString alloc]init];
 //    for(int i=0;i<[a count];i++)
 //    {
